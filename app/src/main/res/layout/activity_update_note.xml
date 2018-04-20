@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context=".UpdateNoteActivity">
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Update"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/titlehead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/update"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Title : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update" />
+
+    <EditText
+        android:id="@+id/titletxt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/titlehead"
+        android:layout_alignBottom="@+id/titlehead"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/descriptionhead"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/titlehead"
+        app:layout_constraintTop_toBottomOf="@+id/update" />
+
+    <TextView
+        android:id="@+id/descriptionhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titlehead"
+        android:layout_below="@+id/titlehead"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="Description : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlehead" />
+
+    <EditText
+        android:id="@+id/descriptiontext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/descriptionhead"
+        android:layout_alignLeft="@+id/titletxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/descriptionhead"
+        app:layout_constraintTop_toBottomOf="@+id/titletxt" />
+
+    <TextView
+        android:id="@+id/picturehead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/descriptionhead"
+        android:layout_below="@+id/descriptionhead"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:text="Picture : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptiontext" />
+
+    <ImageView
+        android:id="@+id/picturenote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/descriptiontext"
+        android:layout_alignTop="@+id/picturehead"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        app:layout_constraintStart_toEndOf="@+id/picturehead"
+        app:layout_constraintTop_toBottomOf="@+id/descriptiontext"
+        app:srcCompat="@mipmap/ic_launcher" />
+</android.support.constraint.ConstraintLayout>

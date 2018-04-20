@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context="com.example.user.easynote.NoteActivity">
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Save"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/titlehead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/save"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Title : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+    <EditText
+        android:id="@+id/titletxt"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/titlehead"
+        android:layout_alignBottom="@+id/titlehead"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/descriptionhead"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/titlehead"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+    <TextView
+        android:id="@+id/descriptionhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titlehead"
+        android:layout_below="@+id/titlehead"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:text="Description : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlehead" />
+
+    <EditText
+        android:id="@+id/descriptiontext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/descriptionhead"
+        android:layout_alignLeft="@+id/titletxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/descriptionhead"
+        app:layout_constraintTop_toBottomOf="@+id/titletxt" />
+
+    <TextView
+        android:id="@+id/picturehead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/descriptionhead"
+        android:layout_below="@+id/descriptionhead"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:text="Picture : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptiontext" />
+
+    <Button
+        android:id="@+id/addphoto"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="92dp"
+        android:onClick="addPhoto"
+        android:text="Add Photo"
+        app:layout_constraintStart_toEndOf="@+id/picturehead"
+        app:layout_constraintTop_toBottomOf="@+id/descriptiontext" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="148dp"
+        android:layout_height="99dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitStart"
+        android:src="@android:drawable/checkbox_on_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picturehead" />
+
+</android.support.constraint.ConstraintLayout>
